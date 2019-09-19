@@ -6,16 +6,6 @@
 	objectVersion = 50;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		7FC9162F2333E804001CC7C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC9162E2333E804001CC7C7 /* AppDelegate.swift */; };
-		7FC916312333E804001CC7C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC916302333E804001CC7C7 /* ViewController.swift */; };
-		7FC916342333E804001CC7C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FC916322333E804001CC7C7 /* Main.storyboard */; };
-		7FC916362333E805001CC7C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FC916352333E805001CC7C7 /* Assets.xcassets */; };
-		7FC916392333E805001CC7C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FC916372333E805001CC7C7 /* LaunchScreen.storyboard */; };
-		7FC916442333E805001CC7C7 /* MarkeyCancerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC916432333E805001CC7C7 /* MarkeyCancerTests.swift */; };
-		7FC9164F2333E805001CC7C7 /* MarkeyCancerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC9164E2333E805001CC7C7 /* MarkeyCancerUITests.swift */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXContainerItemProxy section */
 		7FC916402333E805001CC7C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -34,19 +24,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7FC9162B2333E804001CC7C7 /* MarkeyCancer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarkeyCancer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7FC9162E2333E804001CC7C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7FC916302333E804001CC7C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7FC916332333E804001CC7C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7FC916352333E805001CC7C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7FC916382333E805001CC7C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7FC9163A2333E805001CC7C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7FC9163F2333E805001CC7C7 /* MarkeyCancerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarkeyCancerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7FC916432333E805001CC7C7 /* MarkeyCancerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkeyCancerTests.swift; sourceTree = "<group>"; };
-		7FC916452333E805001CC7C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7FC9164A2333E805001CC7C7 /* MarkeyCancerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarkeyCancerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7FC9164E2333E805001CC7C7 /* MarkeyCancerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkeyCancerUITests.swift; sourceTree = "<group>"; };
-		7FC916502333E805001CC7C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FC9162B2333E804001CC7C7 /* MarkeyCancer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = MarkeyCancer.app; path = "/Users/csba246/Desktop/MarkeyCancer/build/Debug-iphoneos/MarkeyCancer.app"; sourceTree = "<absolute>"; };
+		7FC9163F2333E805001CC7C7 /* MarkeyCancerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = MarkeyCancerTests.xctest; path = "/Users/csba246/Desktop/MarkeyCancer/build/Debug-iphoneos/MarkeyCancerTests.xctest"; sourceTree = "<absolute>"; };
+		7FC9164A2333E805001CC7C7 /* MarkeyCancerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = MarkeyCancerUITests.xctest; path = "/Users/csba246/Desktop/MarkeyCancer/build/Debug-iphoneos/MarkeyCancerUITests.xctest"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,52 +57,7 @@
 		7FC916222333E804001CC7C7 = {
 			isa = PBXGroup;
 			children = (
-				7FC9162D2333E804001CC7C7 /* MarkeyCancer */,
-				7FC916422333E805001CC7C7 /* MarkeyCancerTests */,
-				7FC9164D2333E805001CC7C7 /* MarkeyCancerUITests */,
-				7FC9162C2333E804001CC7C7 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		7FC9162C2333E804001CC7C7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7FC9162B2333E804001CC7C7 /* MarkeyCancer.app */,
-				7FC9163F2333E805001CC7C7 /* MarkeyCancerTests.xctest */,
-				7FC9164A2333E805001CC7C7 /* MarkeyCancerUITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		7FC9162D2333E804001CC7C7 /* MarkeyCancer */ = {
-			isa = PBXGroup;
-			children = (
-				7FC9162E2333E804001CC7C7 /* AppDelegate.swift */,
-				7FC916302333E804001CC7C7 /* ViewController.swift */,
-				7FC916322333E804001CC7C7 /* Main.storyboard */,
-				7FC916352333E805001CC7C7 /* Assets.xcassets */,
-				7FC916372333E805001CC7C7 /* LaunchScreen.storyboard */,
-				7FC9163A2333E805001CC7C7 /* Info.plist */,
-			);
-			path = MarkeyCancer;
-			sourceTree = "<group>";
-		};
-		7FC916422333E805001CC7C7 /* MarkeyCancerTests */ = {
-			isa = PBXGroup;
-			children = (
-				7FC916432333E805001CC7C7 /* MarkeyCancerTests.swift */,
-				7FC916452333E805001CC7C7 /* Info.plist */,
-			);
-			path = MarkeyCancerTests;
-			sourceTree = "<group>";
-		};
-		7FC9164D2333E805001CC7C7 /* MarkeyCancerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				7FC9164E2333E805001CC7C7 /* MarkeyCancerUITests.swift */,
-				7FC916502333E805001CC7C7 /* Info.plist */,
-			);
-			path = MarkeyCancerUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,7 +148,7 @@
 				Base,
 			);
 			mainGroup = 7FC916222333E804001CC7C7;
-			productRefGroup = 7FC9162C2333E804001CC7C7 /* Products */;
+			productRefGroup = 7FC916222333E804001CC7C7;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -229,9 +164,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FC916392333E805001CC7C7 /* LaunchScreen.storyboard in Resources */,
-				7FC916362333E805001CC7C7 /* Assets.xcassets in Resources */,
-				7FC916342333E804001CC7C7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +188,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FC916312333E804001CC7C7 /* ViewController.swift in Sources */,
-				7FC9162F2333E804001CC7C7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +195,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FC916442333E805001CC7C7 /* MarkeyCancerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +202,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FC9164F2333E805001CC7C7 /* MarkeyCancerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,25 +219,6 @@
 			targetProxy = 7FC9164B2333E805001CC7C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		7FC916322333E804001CC7C7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7FC916332333E804001CC7C7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		7FC916372333E805001CC7C7 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7FC916382333E805001CC7C7 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		7FC916512333E805001CC7C7 /* Debug */ = {
@@ -467,7 +376,6 @@
 		7FC916572333E805001CC7C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MarkeyCancerTests/Info.plist;
@@ -487,7 +395,6 @@
 		7FC916582333E805001CC7C7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MarkeyCancerTests/Info.plist;
@@ -507,7 +414,6 @@
 		7FC9165A2333E805001CC7C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MarkeyCancerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -526,7 +432,6 @@
 		7FC9165B2333E805001CC7C7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MarkeyCancerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
