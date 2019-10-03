@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         
         title = "Patient List:"
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.delegate=self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -138,5 +139,13 @@ extension ViewController: UITableViewDataSource {
   }
 }
 
-
+// MARK: - UITableViewDelegate
+extension ViewController: UITableViewDelegate
+{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let patientPC=storyboard?.instantiateViewController(identifier: "patientPage") as! patientPage
+        patientPC.patientName=people[indexPath.row]
+        navigationController?.pushViewController(patientPC, animated: true)
+    }
+}
 
