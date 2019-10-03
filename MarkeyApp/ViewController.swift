@@ -133,8 +133,7 @@ extension ViewController: UITableViewDataSource {
     let cell =
       tableView.dequeueReusableCell(withIdentifier: "Cell",
                                     for: indexPath)
-    cell.textLabel?.text =
-      person.value(forKeyPath: "name") as? String
+    cell.textLabel?.text = person.value(forKeyPath: "name") as? String
     return cell
   }
 }
