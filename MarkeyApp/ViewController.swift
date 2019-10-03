@@ -14,7 +14,12 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     var people: [NSManagedObject] = []
-
+    
+    var filteredData: [NSManagedObject]! // Supposed to contain the data pertaining to the search?
+    
+    var stringArray: [String] = []
+    
+    var searchController: UISearchController!
     
     
     override func viewDidLoad() {
@@ -23,7 +28,73 @@ class ViewController: UIViewController {
         title = "Patient List:"
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         tableView.delegate=self
+        tableView.dataSource = self
+        
+        filteredData = people
+        
+        //Just stuff to make the Search Bar
+        
+        // Initializing with searchResultsController set to nil means that
+        // searchController will use this view controller to display the search results
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self as? UISearchResultsUpdating
+        
+        // If we are using this same view controller to present the results
+        // dimming it out wouldn't make sense. Should probably only set
+        // this to yes if using another controller to display the search results.
+        searchController.dimsBackgroundDuringPresentation = false
+
+        searchController.searchBar.sizeToFit()
+        tableView.tableHeaderView = searchController.searchBar
+        
+        // Sets this view controller as presenting view controller for the search interface
+        definesPresentationContext = true
     }
+    
+    
+    //  The function that the error was originating from
+    //  As far as I can tell it's supposed to take the text from the search bar and put it into searchText, where it then goes through people to filter out only those results to print
+        
+    ///    func updateSearchResultsForSearchController(searchController: UISearchController) {
+    ///        if let searchText = searchController.searchBar.text {
+    ///            filteredData = people.filter({(dataString: String) -> Bool in
+    ///               return (dataString.localizedLowercase as AnyObject).containsString(searchText.lowercased())//rangeOfString(searchText, options: .CaseInsensitiveSearch) != nil
+    ///           })
+
+                
+               
+                
+    ///           tableView.reloadData()
+    ///        }
+    ///    }
+    
+    
+    // I believe I modified these two tableViews
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var person = filteredData[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell")!
+        
+        if searchController.isActive && searchController.searchBar.text != ""
+        {
+            person = filteredData[indexPath.row]
+        }
+        else
+        {
+            person = people[indexPath.row]
+        }
+        
+        cell.textLabel?.text = person.value(forKeyPath: "TableCell") as? String
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if searchController.isActive && searchController.searchBar.text != ""
+        {
+        return filteredData.count
+        }
+        return people.count
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
       super.viewWillAppear(animated)
