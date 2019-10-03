@@ -11,6 +11,9 @@ import UIKit
 import CoreData
 class patientPage : UITableViewController {
     var patientName : NSManagedObject?
+    var patientLabelPlate :String?
+    func setuplabel(){
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
