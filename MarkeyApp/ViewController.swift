@@ -38,14 +38,11 @@ class ViewController: UIViewController {
         // searchController will use this view controller to display the search results
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self as? UISearchResultsUpdating
-        
-        // If we are using this same view controller to present the results
-        // dimming it out wouldn't make sense. Should probably only set
-        // this to yes if using another controller to display the search results.
-        searchController.dimsBackgroundDuringPresentation = false
 
         searchController.searchBar.sizeToFit()
         tableView.tableHeaderView = searchController.searchBar
+        searchController.searchBar.showsScopeBar = true // shows filters to search for
+        searchController.searchBar.scopeButtonTitles = ["Name","Age","Illness"] // label of filters
         
         // Sets this view controller as presenting view controller for the search interface
         definesPresentationContext = true
@@ -55,18 +52,18 @@ class ViewController: UIViewController {
     //  The function that the error was originating from
     //  As far as I can tell it's supposed to take the text from the search bar and put it into searchText, where it then goes through people to filter out only those results to print
         
-    ///    func updateSearchResultsForSearchController(searchController: UISearchController) {
-    ///        if let searchText = searchController.searchBar.text {
-    ///            filteredData = people.filter({(dataString: String) -> Bool in
-    ///               return (dataString.localizedLowercase as AnyObject).containsString(searchText.lowercased())//rangeOfString(searchText, options: .CaseInsensitiveSearch) != nil
-    ///           })
+ /*       func updateSearchResultsForSearchController(searchController: UISearchController) {
+            if let searchText = searchController.searchBar.text {
+                filteredData = people.filter({(dataString: String) -> Bool in
+                   return (dataString.localizedLowercase as AnyObject).containsString(searchText.lowercased())//rangeOfString(searchText, options: .CaseInsensitiveSearch) != nil
+               })
 
                 
                
                 
-    ///           tableView.reloadData()
-    ///        }
-    ///    }
+               tableView.reloadData()
+            }
+        }*/
     
     
     // I believe I modified these two tableViews
