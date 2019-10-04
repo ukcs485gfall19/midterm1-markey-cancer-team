@@ -5,6 +5,7 @@
 //  Created by Christopher Bankes on 9/28/19.
 //  Copyright © 2019 MarkeyCenter. All rights reserved.
 //
+//Code to set up the search bar, update the search results, and the two relevant Tableviews all originated from: guides.codepath.com/ios/Search-Bar-Guide#using-uisearchcontrollers-ios-8 as a reference
 
 import UIKit
 import CoreData
@@ -15,13 +16,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var people: [NSManagedObject] = []
     
-    var filteredData: [NSManagedObject]! // Supposed to contain the data pertaining to the search?
+    var filteredData: [NSManagedObject]! // Supposed to contain the data pertaining to                                        the search
     
     var stringArray: [String] = []
     
     var searchController: UISearchController!
     
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,44 +34,39 @@ class ViewController: UIViewController {
         
         filteredData = people
         
-        //Just stuff to make the Search Bar
-        
-        // Initializing with searchResultsController set to nil means that
-        // searchController will use this view controller to display the search results
+        // searchController should use this view controller to display the results
+        // due to serachResultsContoller being nil
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self as? UISearchResultsUpdating
-        
-        // If we are using this same view controller to present the results
-        // dimming it out wouldn't make sense. Should probably only set
-        // this to yes if using another controller to display the search results.
-        searchController.dimsBackgroundDuringPresentation = false
 
+        //Setting up the search bar
         searchController.searchBar.sizeToFit()
         tableView.tableHeaderView = searchController.searchBar
+        searchController.searchBar.showsScopeBar = true // shows filters to search for
+        searchController.searchBar.scopeButtonTitles = ["Name","Age","Illness"] // label of filters
         
         // Sets this view controller as presenting view controller for the search interface
         definesPresentationContext = true
     }
     
-    
-    //  The function that the error was originating from
-    //  As far as I can tell it's supposed to take the text from the search bar and put it into searchText, where it then goes through people to filter out only those results to print
-        
-    ///    func updateSearchResultsForSearchController(searchController: UISearchController) {
-    ///        if let searchText = searchController.searchBar.text {
-    ///            filteredData = people.filter({(dataString: String) -> Bool in
-    ///               return (dataString.localizedLowercase as AnyObject).containsString(searchText.lowercased())//rangeOfString(searchText, options: .CaseInsensitiveSearch) != nil
-    ///           })
+    //Should be what updates the search results so that they can be displayed
+    //(IN PROGRESS)
+        func updateSearchResultsForSearchController(searchController: UISearchController) {
+            if let searchText = searchController.searchBar.text {
+                //filtering the data based off of the search string
+                filteredData = people.filter({(dataString: String) -> Bool in
+                   return (dataString.localizedLowercase as AnyObject).containsString(searchText.lowercased())//rangeOfString(searchText, options: .CaseInsensitiveSearch) != nil
+               })
 
                 
                
                 
-    ///           tableView.reloadData()
-    ///        }
-    ///    }
+               tableView.reloadData()
+            }
+        }
     
     
-    // I believe I modified these two tableViews
+    // The following two viewTables are to help the searchbar
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var person = filteredData[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell")!
