@@ -16,6 +16,6 @@ class patientPage : UITableViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title=patientName!.value(forKeyPath: "name") as? String
     }
 }
