@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3DDDBFB323459C5E00BC1BED /* patientPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDDBFB223459C5E00BC1BED /* patientPage.swift */; };
-		3DDDBFB523459C7C00BC1BED /* patientPageLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDDBFB423459C7C00BC1BED /* patientPageLabel.swift */; };
 		B75760A4233FC74D00ABC954 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75760A3233FC74D00ABC954 /* AppDelegate.swift */; };
 		B75760A6233FC74D00ABC954 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75760A5233FC74D00ABC954 /* SceneDelegate.swift */; };
 		B75760A8233FC74D00ABC954 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75760A7233FC74D00ABC954 /* ViewController.swift */; };
@@ -20,7 +19,6 @@
 
 /* Begin PBXFileReference section */
 		3DDDBFB223459C5E00BC1BED /* patientPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = patientPage.swift; sourceTree = "<group>"; };
-		3DDDBFB423459C7C00BC1BED /* patientPageLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = patientPageLabel.swift; sourceTree = "<group>"; };
 		B75760A0233FC74D00ABC954 /* MarkeyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarkeyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B75760A3233FC74D00ABC954 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B75760A5233FC74D00ABC954 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,7 +64,6 @@
 				B75760A5233FC74D00ABC954 /* SceneDelegate.swift */,
 				B75760A7233FC74D00ABC954 /* ViewController.swift */,
 				3DDDBFB223459C5E00BC1BED /* patientPage.swift */,
-				3DDDBFB423459C7C00BC1BED /* patientPageLabel.swift */,
 				B75760A9233FC74D00ABC954 /* Main.storyboard */,
 				B75760AF233FC74E00ABC954 /* Assets.xcassets */,
 				B75760B1233FC74E00ABC954 /* LaunchScreen.storyboard */,
@@ -148,7 +145,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B75760AE233FC74D00ABC954 /* MarkeyApp.xcdatamodeld in Sources */,
-				3DDDBFB523459C7C00BC1BED /* patientPageLabel.swift in Sources */,
 				B75760A8233FC74D00ABC954 /* ViewController.swift in Sources */,
 				B75760A4233FC74D00ABC954 /* AppDelegate.swift in Sources */,
 				B75760A6233FC74D00ABC954 /* SceneDelegate.swift in Sources */,
