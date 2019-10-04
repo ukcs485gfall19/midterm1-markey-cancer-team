@@ -114,6 +114,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="zpw-7q-VeF"/>
+                    <connections>
+                        <outlet property="PatientInfoTable" destination="c90-lP-Fo0" id="pPr-hG-a5b"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MvQ-O0-bsu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
