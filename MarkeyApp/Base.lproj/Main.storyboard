@@ -105,10 +105,10 @@
             </objects>
             <point key="canvasLocation" x="1963.7681159420292" y="108.48214285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--Basic Info-->
         <scene sceneID="uhH-aA-o9i">
             <objects>
-                <viewController id="Lu0-Og-1RS" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="basicInfo" id="Lu0-Og-1RS" customClass="basicInfo" customModule="MarkeyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lXo-NN-UbE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -116,6 +116,9 @@
                         <viewLayoutGuide key="safeArea" id="nMX-H7-Gky"/>
                     </view>
                     <navigationItem key="navigationItem" id="3jC-8z-L8Q"/>
+                    <connections>
+                        <outlet property="basicInfo" destination="lXo-NN-UbE" id="Dou-Nx-zuk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EIM-dh-wp2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

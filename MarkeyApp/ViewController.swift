@@ -6,7 +6,7 @@
 //  Copyright © 2019 MarkeyCenter. All rights reserved.
 //
 //Code to set up the search bar, update the search results, and the two relevant Tableviews all originated from: guides.codepath.com/ios/Search-Bar-Guide#using-uisearchcontrollers-ios-8 as a reference
-// Default tutorial app is from
+// Default tutorial app is from: https://www.raywenderlich.com/7569-getting-started-with-core-data-tutorial
 
 import UIKit
 import CoreData
@@ -92,7 +92,7 @@ class ViewController: UIViewController {
         return people.count
     }
     
-    
+    //this is from the tutorial. It fetches info from coredata
     override func viewWillAppear(_ animated: Bool) {
       super.viewWillAppear(animated)
       
@@ -150,6 +150,7 @@ class ViewController: UIViewController {
       present(alert, animated: true)
     }
     
+    //saves info to core data from add function
     func save(name: String) {
       
       guard let appDelegate =
@@ -185,7 +186,7 @@ class ViewController: UIViewController {
 
     
 }
-
+// from the tutorial, sets up the tableview from ViewController
 // MARK: - UITableViewDataSource
 extension ViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView,
@@ -203,7 +204,9 @@ extension ViewController: UITableViewDataSource {
     return cell
   }
 }
-
+//coded this with help from the tutorial linked in patientPage.swift. It allows the switch from the first viewcontroller
+//with the entrypoint to the tableViewController which is the patientPage. Also stores the current patient Name for use on the
+//openned page
 // MARK: - UITableViewDelegate
 extension ViewController: UITableViewDelegate
 {

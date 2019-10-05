@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3DB3244A2348132A0026B043 /* menuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB324492348132A0026B043 /* menuCell.swift */; };
+		3DB3244C234847530026B043 /* basicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB3244B234847530026B043 /* basicInfo.swift */; };
 		3DDDBFB323459C5E00BC1BED /* patientPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDDBFB223459C5E00BC1BED /* patientPage.swift */; };
 		B75760A4233FC74D00ABC954 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75760A3233FC74D00ABC954 /* AppDelegate.swift */; };
 		B75760A6233FC74D00ABC954 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75760A5233FC74D00ABC954 /* SceneDelegate.swift */; };
@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3DB324492348132A0026B043 /* menuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuCell.swift; sourceTree = "<group>"; };
+		3DB3244B234847530026B043 /* basicInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = basicInfo.swift; sourceTree = "<group>"; };
 		3DDDBFB223459C5E00BC1BED /* patientPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = patientPage.swift; sourceTree = "<group>"; };
 		B75760A0233FC74D00ABC954 /* MarkeyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarkeyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B75760A3233FC74D00ABC954 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 				B75760A5233FC74D00ABC954 /* SceneDelegate.swift */,
 				B75760A7233FC74D00ABC954 /* ViewController.swift */,
 				3DDDBFB223459C5E00BC1BED /* patientPage.swift */,
-				3DB324492348132A0026B043 /* menuCell.swift */,
+				3DB3244B234847530026B043 /* basicInfo.swift */,
 				B75760A9233FC74D00ABC954 /* Main.storyboard */,
 				B75760AF233FC74E00ABC954 /* Assets.xcassets */,
 				B75760B1233FC74E00ABC954 /* LaunchScreen.storyboard */,
@@ -147,11 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DB3244C234847530026B043 /* basicInfo.swift in Sources */,
 				B75760AE233FC74D00ABC954 /* MarkeyApp.xcdatamodeld in Sources */,
 				B75760A8233FC74D00ABC954 /* ViewController.swift in Sources */,
 				B75760A4233FC74D00ABC954 /* AppDelegate.swift in Sources */,
 				B75760A6233FC74D00ABC954 /* SceneDelegate.swift in Sources */,
-				3DB3244A2348132A0026B043 /* menuCell.swift in Sources */,
 				3DDDBFB323459C5E00BC1BED /* patientPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
