@@ -6,6 +6,7 @@
 //  Copyright © 2019 MarkeyCenter. All rights reserved.
 //
 //Code to set up the search bar, update the search results, and the two relevant Tableviews all originated from: guides.codepath.com/ios/Search-Bar-Guide#using-uisearchcontrollers-ios-8 as a reference
+// Default tutorial app is from
 
 import UIKit
 import CoreData
@@ -15,7 +16,6 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     var people: [NSManagedObject] = []
-    
     var filteredData: [NSManagedObject]! // Supposed to contain the data pertaining to                                        the search
     
     var stringArray: [String] = []
@@ -51,19 +51,19 @@ class ViewController: UIViewController {
     
     //Should be what updates the search results so that they can be displayed
     //(IN PROGRESS)
-        func updateSearchResultsForSearchController(searchController: UISearchController) {
-            if let searchText = searchController.searchBar.text {
+    //    func updateSearchResultsForSearchController(searchController: UISearchController) {
+    //        if let searchText = searchController.searchBar.text {
                 //filtering the data based off of the search string
-                filteredData = people.filter({(dataString: String) -> Bool in
-                   return (dataString.localizedLowercase as AnyObject).containsString(searchText.lowercased())//rangeOfString(searchText, options: .CaseInsensitiveSearch) != nil
-               })
+     //           filteredData = people.filter({(dataString: String) -> Bool in
+      //             return (dataString.localizedLowercase as AnyObject).containsString(searchText.lowercased())//rangeOfString(searchText, options: .CaseInsensitiveSearch) != nil
+      //         })
 
                 
                
                 
-               tableView.reloadData()
-            }
-        }
+       //        tableView.reloadData()
+        //  }
+       // }
     
     
     // The following two viewTables are to help the searchbar
@@ -156,7 +156,7 @@ class ViewController: UIViewController {
         UIApplication.shared.delegate as? AppDelegate else {
         return
       }
-      
+    
       // 1
       let managedContext =
         appDelegate.persistentContainer.viewContext
