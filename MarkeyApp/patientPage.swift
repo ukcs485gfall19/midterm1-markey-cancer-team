@@ -14,8 +14,6 @@ import CoreData
 class patientPage : UITableViewController
 {
     var patientName : NSManagedObject?
-    var patientLabelPlate :String?
-    
     @IBOutlet var PatientInfoTable: UITableView!
     override func viewDidLoad()
     {
@@ -26,6 +24,7 @@ class patientPage : UITableViewController
         PatientInfoTable.dataSource=self
         PatientInfoTable.delegate=self
     }
+    //setup for patient page options
     override func tableView(_ PatientInfoTable: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return menuOptions.count
@@ -38,6 +37,7 @@ class patientPage : UITableViewController
         menuCellActual.textLabel?.text=anotherLabel
         return menuCellActual
     }
+    //allows the transition to the basic info page
    override func tableView(_ PatientInfoTable: UITableView, didSelectRowAt indexPath: IndexPath) {
            let basicInfo=storyboard?.instantiateViewController(identifier: "basicInfo") as! basicInfo
             navigationController?.pushViewController(basicInfo, animated: true)
