@@ -5,6 +5,8 @@
 //  Created by Christopher Bankes on 9/28/19.
 //  Copyright © 2019 MarkeyCenter. All rights reserved.
 //
+//Code to set up the search bar, update the search results, and the two relevant Tableviews all originated from: guides.codepath.com/ios/Search-Bar-Guide#using-uisearchcontrollers-ios-8 as a reference
+// Default tutorial app is from: https://www.raywenderlich.com/7569-getting-started-with-core-data-tutorial
 
 import UIKit
 import CoreData
@@ -14,14 +16,14 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     var people: [NSManagedObject] = []
-    
-    var filteredData: [NSManagedObject]! // Supposed to contain the data pertaining to the search?
+    var filteredData: [NSManagedObject]! // Supposed to contain the data pertaining to                                        the search
     
     var stringArray: [String] = []
     
     var searchController: UISearchController!
     
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,13 +34,12 @@ class ViewController: UIViewController {
         
         filteredData = people
         
-        //Just stuff to make the Search Bar
-        
-        // Initializing with searchResultsController set to nil means that
-        // searchController will use this view controller to display the search results
+        // searchController should use this view controller to display the results
+        // due to serachResultsContoller being nil
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self as? UISearchResultsUpdating
 
+        //Setting up the search bar
         searchController.searchBar.sizeToFit()
         tableView.tableHeaderView = searchController.searchBar
         searchController.searchBar.showsScopeBar = true // shows filters to search for
@@ -80,12 +81,12 @@ class ViewController: UIViewController {
                 
                
                 
-               tableView.reloadData()
-            }
-        }*/
+       //        tableView.reloadData()
+        //  }
+       // }
     
     
-    // I believe I modified these two tableViews
+    // The following two viewTables are to help the searchbar
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var person = filteredData[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell")!
@@ -111,7 +112,7 @@ class ViewController: UIViewController {
         return people.count
     }
     
-    
+    //this is from the tutorial. It fetches info from coredata
     override func viewWillAppear(_ animated: Bool) {
       super.viewWillAppear(animated)
       
@@ -169,13 +170,14 @@ class ViewController: UIViewController {
       present(alert, animated: true)
     }
     
+    //saves info to core data from add function
     func save(name: String) {
       
       guard let appDelegate =
         UIApplication.shared.delegate as? AppDelegate else {
         return
       }
-      
+    
       // 1
       let managedContext =
         appDelegate.persistentContainer.viewContext
@@ -204,7 +206,7 @@ class ViewController: UIViewController {
 
     
 }
-
+// from the tutorial, sets up the tableview from ViewController
 // MARK: - UITableViewDataSource
 extension ViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView,
@@ -222,7 +224,9 @@ extension ViewController: UITableViewDataSource {
     return cell
   }
 }
-
+//coded this with help from the tutorial linked in patientPage.swift. It allows the switch from the first viewcontroller
+//with the entrypoint to the tableViewController which is the patientPage. Also stores the current patient Name for use on the
+//openned page
 // MARK: - UITableViewDelegate
 extension ViewController: UITableViewDelegate
 {
