@@ -34,7 +34,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Qyu-nh-yY8">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="Ary-1l-mtk">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xxL-aN-9jo">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xxL-aN-9jo">
                                 <rect key="frame" x="20" y="7.5" width="92" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>

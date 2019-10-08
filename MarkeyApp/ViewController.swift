@@ -54,8 +54,8 @@ class ViewController: UIViewController {
     //  As far as I can tell it's supposed to take the text from the search bar and put it into searchText, where it then goes through people to filter out only those results to print
         
  /*       func updateSearchResultsForSearchController(searchController: UISearchController) {
-            if let searchText = searchController.searchBar.text {
-                
+           if let searchText = searchController.searchBar.text {
+                *********THIS IS WHAT DR. BAKER WAS SHOWING US AFTER CLASS***************
                 guard let actualPeople = people as? [Person] else{
                     return
                 }
@@ -69,9 +69,9 @@ class ViewController: UIViewController {
                     if currentPersonsName.lowercased() == searchText{
                         print("found")
                     }
-                }
+                }**************************************************
                 
-                
+                *****THIS IS WHERE THE ERROR IS*********
                 filteredData = actualPeople.filter({(dataString: String) -> Bool in
                     
                     
@@ -83,7 +83,7 @@ class ViewController: UIViewController {
                 
        //        tableView.reloadData()
         //  }
-       // }
+       // }*/
     
     
     // The following two viewTables are to help the searchbar
