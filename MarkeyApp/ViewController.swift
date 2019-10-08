@@ -54,8 +54,27 @@ class ViewController: UIViewController {
         
  /*       func updateSearchResultsForSearchController(searchController: UISearchController) {
             if let searchText = searchController.searchBar.text {
-                filteredData = people.filter({(dataString: String) -> Bool in
-                   return (dataString.localizedLowercase as AnyObject).containsString(searchText.lowercased())//rangeOfString(searchText, options: .CaseInsensitiveSearch) != nil
+                
+                guard let actualPeople = people as? [Person] else{
+                    return
+                }
+                
+                for person in actualPeople{
+                    
+                    guard let currentPersonsName = person.name else{
+                        return
+                    }
+                    
+                    if currentPersonsName.lowercased() == searchText{
+                        print("found")
+                    }
+                }
+                
+                
+                filteredData = actualPeople.filter({(dataString: String) -> Bool in
+                    
+                    
+                   return (dataString.lowercased() as AnyObject).containsString(searchText.lowercased())//rangeOfString(searchText, options: .CaseInsensitiveSearch) != nil
                })
 
                 
