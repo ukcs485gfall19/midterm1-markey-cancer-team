@@ -73,8 +73,6 @@ class ViewController: UIViewController {
                 
                 *****THIS IS WHERE THE ERROR IS*********
                 filteredData = actualPeople.filter({(dataString: String) -> Bool in
-                    
-                    
                    return (dataString.lowercased() as AnyObject).containsString(searchText.lowercased())//rangeOfString(searchText, options: .CaseInsensitiveSearch) != nil
                })
 
